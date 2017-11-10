@@ -30,7 +30,7 @@ if ($num > 0) {
     echo json_encode($sprites_arr);
 } else {
     echo json_encode(
-	array("message" => "No productions found.")
+	array("message" => "No sprites found.")
     );
 }
 ?>

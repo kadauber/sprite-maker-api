@@ -32,7 +32,7 @@ if ($num > 0) {
     echo json_encode($pixels_arr);
 } else {
     echo json_encode(
-	array("message" => "No productions found.")
+	array("message" => "No pixels found.")
     );
 }
 ?>
