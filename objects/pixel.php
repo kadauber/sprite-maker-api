@@ -21,6 +21,21 @@ class Pixel {
 	return $stmt;
     }
 
+    public function readForSprite() {
+        $query = "SELECT * from " . $this->table_name . " WHERE SpriteID=:spriteId";
+        $stmt = $this->conn->prepare($query);
+
+        $this->spriteId = htmlspecialchars(strip_tags($this->spriteId));
+
+        $stmt->bindParam(":spriteId", $this->spriteId);
+
+        if ($stmt->execute()) {
+	    return true;
+	} else {
+	    return false;
+	}
+    }
+
     public function create() {
 	$query = "INSERT INTO " . $this->table_name . " SET SpriteID=:spriteId, Position=:position, Color=:color";
 	$stmt = $this->conn->prepare($query);
