@@ -22,7 +22,7 @@ $pixel->color = $data->color;
 
 if ($pixel->update()) {
     echo '{';
-    echo '"message": Pixel was updated."';
+    echo '"message": "Pixel was updated."';
     echo '}';
 } else {
     echo '{';
