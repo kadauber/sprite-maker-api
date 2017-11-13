@@ -1,6 +1,5 @@
 <?php
 
-header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
@@ -20,6 +19,10 @@ $sprite->name = $data->name;
 
 if ($sprite->create()) {
     echo '{';
+        echo '"record": {';
+            echo '"id": "' . $db->lastInsertId() . '",';
+            echo '"name": "' . $sprite->name . '"';
+        echo '},';
 	echo '"message": "Sprite was created."';
     echo '}';
 } else {

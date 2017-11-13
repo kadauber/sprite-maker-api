@@ -1,6 +1,5 @@
 <?php
 
-header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
@@ -21,7 +20,7 @@ $sprite->name = $data->name;
 
 if ($sprite->update()) {
     echo '{';
-	echo '"message": Sprite was updated."';
+	echo '"message": "Sprite was updated."';
     echo '}';
 } else {
     echo '{';

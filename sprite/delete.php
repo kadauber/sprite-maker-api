@@ -1,6 +1,5 @@
 <?php
 
-header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
@@ -17,7 +16,7 @@ $sprite = new Sprite($db);
 $data = json_decode(file_get_contents("php://input"));
 
 $sprite->id = $data->id;
-echo $data->id;
+
 if ($sprite->delete()) {
     echo '{';
 	echo '"message": "sprite was deleted."';
