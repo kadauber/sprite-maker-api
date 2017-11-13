@@ -19,11 +19,10 @@ $pixel->id = $data->id;
 echo $data->id;
 if ($pixel->delete()) {
     echo '{';
-	echo '"message": "Pixel was deleted."';
+    echo '"message": "Pixel was deleted."';
     echo '}';
 } else {
     echo '{';
-	echo '"message": "Unable to delete pixel."';
+    echo '"message": "Unable to delete pixel."';
     echo '}';
 }
-?>

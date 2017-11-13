@@ -20,11 +20,10 @@ $sprite->name = $data->name;
 
 if ($sprite->update()) {
     echo '{';
-	echo '"message": "Sprite was updated."';
+    echo '"message": "Sprite was updated."';
     echo '}';
 } else {
     echo '{';
-	echo '"message": "Unable to update sprite."';
+    echo '"message": "Unable to update sprite."';
     echo '}';
 }
-?>

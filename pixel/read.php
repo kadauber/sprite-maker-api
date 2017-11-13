@@ -17,22 +17,21 @@ if ($num > 0) {
     $pixels_arr = array();
     $pixels_arr["records"] = array();
 
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
         $pixel_item = array(
-	    "id" => $row['ID'],
-        "spriteId" => $row['SpriteID'],
-        "position" => $row['Position'],
-        "color" => $row['Color']
-	);
+            "id" => $row['ID'],
+            "spriteId" => $row['SpriteID'],
+            "position" => $row['Position'],
+            "color" => $row['Color'],
+        );
 
-	array_push($pixels_arr["records"], $pixel_item);
+        array_push($pixels_arr["records"], $pixel_item);
     }
 
     echo json_encode($pixels_arr);
 } else {
     echo json_encode(
-	array("message" => "No pixels found.")
+        array("message" => "No pixels found.")
     );
 }
-?>

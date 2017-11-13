@@ -17,20 +17,19 @@ if ($num > 0) {
     $sprites_arr = array();
     $sprites_arr["records"] = array();
 
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
         $sprite_item = array(
-	    "id" => $row['ID'],
-	    "name" => $row['Name'],
-	);
+            "id" => $row['ID'],
+            "name" => $row['Name'],
+        );
 
-	array_push($sprites_arr["records"], $sprite_item);
+        array_push($sprites_arr["records"], $sprite_item);
     }
 
     echo json_encode($sprites_arr);
 } else {
     echo json_encode(
-	array("message" => "No sprites found.")
+        array("message" => "No sprites found.")
     );
 }
-?>

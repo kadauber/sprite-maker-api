@@ -19,11 +19,10 @@ $sprite->id = $data->id;
 
 if ($sprite->delete()) {
     echo '{';
-	echo '"message": "sprite was deleted."';
+    echo '"message": "sprite was deleted."';
     echo '}';
 } else {
     echo '{';
-	echo '"message": "Unable to delete sprite."';
+    echo '"message": "Unable to delete sprite."';
     echo '}';
 }
-?>

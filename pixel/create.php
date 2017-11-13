@@ -21,11 +21,10 @@ $pixel->color = $data->color;
 
 if ($pixel->create()) {
     echo '{';
-	echo '"message": "Pixel was created."';
+    echo '"message": "Pixel was created."';
     echo '}';
 } else {
     echo '{';
-	echo '"message": "Unable to create pixel."';
+    echo '"message": "Unable to create pixel."';
     echo '}';
 }
-?>

@@ -19,15 +19,14 @@ $sprite->name = $data->name;
 
 if ($sprite->create()) {
     echo '{';
-        echo '"record": {';
-            echo '"id": "' . $db->lastInsertId() . '",';
-            echo '"name": "' . $sprite->name . '"';
-        echo '},';
-	echo '"message": "Sprite was created."';
+    echo '"record": {';
+    echo '"id": "' . $db->lastInsertId() . '",';
+    echo '"name": "' . $sprite->name . '"';
+    echo '},';
+    echo '"message": "Sprite was created."';
     echo '}';
 } else {
     echo '{';
-	echo '"message": "Unable to create sprite."';
+    echo '"message": "Unable to create sprite."';
     echo '}';
 }
-?>
