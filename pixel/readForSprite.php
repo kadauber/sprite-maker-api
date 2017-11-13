@@ -9,6 +9,7 @@ $database = new Database();
 $db = $database->getDatabaseConnection();
 
 $pixel = new Pixel($db);
+$pixel->spriteId = isset($_GET["id"]) ? $_GET["id"] : 0;
 
 $stmt = $pixel->readForSprite();
 $num = $stmt->rowCount();
